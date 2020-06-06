@@ -1,6 +1,6 @@
 ﻿namespace RAD
 {
-    partial class Form1
+    partial class Toolbox
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // Toolbox
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(184, 461);
+            this.MaximumSize = new System.Drawing.Size(200, 500);
+            this.MinimumSize = new System.Drawing.Size(200, 500);
+            this.Name = "Toolbox";
+            this.Text = "Toolbox";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
     }
 }
-
