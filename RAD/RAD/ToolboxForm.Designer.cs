@@ -1,6 +1,6 @@
 ﻿namespace RAD
 {
-    partial class Toolbox
+    partial class ToolboxForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,15 @@
         {
             this.SuspendLayout();
             // 
-            // Toolbox
+            // ToolboxForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(184, 461);
+            this.ControlBox = false;
             this.MaximumSize = new System.Drawing.Size(200, 500);
             this.MinimumSize = new System.Drawing.Size(200, 500);
-            this.Name = "Toolbox";
+            this.Name = "ToolboxForm";
             this.Text = "Toolbox";
             this.ResumeLayout(false);
 

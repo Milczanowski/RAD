@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace RAD
 {
-    public partial class Toolbox : Form
+    public partial class ToolboxForm : Form
     {
-        public Toolbox()
+        public ToolboxForm()
         {
             InitializeComponent();
         }
+
     }
 }

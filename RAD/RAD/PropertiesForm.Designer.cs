@@ -1,6 +1,6 @@
 ﻿namespace RAD
 {
-    partial class Properties
+    partial class PropertiesForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,15 @@
         {
             this.SuspendLayout();
             // 
-            // Properties
+            // PropertiesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(184, 461);
+            this.ControlBox = false;
             this.MaximumSize = new System.Drawing.Size(200, 500);
             this.MinimumSize = new System.Drawing.Size(200, 500);
-            this.Name = "Properties";
+            this.Name = "PropertiesForm";
             this.Text = "Properties";
             this.ResumeLayout(false);
 
