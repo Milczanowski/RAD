@@ -1,14 +1,11 @@
-﻿using System.Windows.Forms;
-
-namespace RAD.Elements
+﻿namespace RAD.Elements
 {
-    public partial class RADImage : UserControl, IRADElement
+    public partial class RADImage : BaseRADControl
     {
         public RADImage()
         {
             InitializeComponent();
+            image.Click += new System.EventHandler(Control_Click);
         }
-
-        public Control GetControl { get { return this; } }
     }
 }

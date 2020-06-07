@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace RAD
@@ -15,6 +8,21 @@ namespace RAD
         public PropertiesForm()
         {
             InitializeComponent();
+        }
+
+        public void SetProperties(List<IProperty> properties)
+        {
+            Controls.Clear();
+
+            int position = 0;
+
+            foreach(IProperty property in properties)
+            {
+                Control control = property.GetControl;
+                Controls.Add(control);
+                control.Location = new System.Drawing.Point(0, position);
+                position += control.Height;
+            }
         }
     }
 }

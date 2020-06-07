@@ -42,8 +42,14 @@ namespace RAD
                 Control control = currentSelectedElement.GetControl;
                 Controls.Add(control);
                 control.Location = PointToClient(Cursor.Position);
-                    //new System.Drawing.Point(Cursor.Position.X - Location.X, Cursor.Position.Y - Location.Y);
+                currentSelectedElement.SetOnClickEvent(OnClickRADElement);
+                currentSelectedElement = null;
             }
+        }
+
+        private void OnClickRADElement(IRADElement radElement)
+        {
+            PropertiesForm.SetProperties(radElement.GetProperties);
         }
     }
 }

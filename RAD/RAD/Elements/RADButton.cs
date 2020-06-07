@@ -2,13 +2,13 @@
 
 namespace RAD.Elements
 {
-    public partial class RADButton : UserControl, IRADElement
+    public partial class RADButton : BaseRADControl
     {
         public RADButton()
         {
             InitializeComponent();
-        }
 
-        public Control GetControl { get { return this; } }
+            label.Click += new System.EventHandler(Control_Click);
+        }
     }
 }
