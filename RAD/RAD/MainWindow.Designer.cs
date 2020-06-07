@@ -38,6 +38,7 @@
             this.Name = "MainWindow";
             this.Text = "RAD";
             this.Load += new System.EventHandler(this.MainWindow_Load);
+            this.Click += new System.EventHandler(this.MainWindow_Click);
             this.ResumeLayout(false);
 
         }

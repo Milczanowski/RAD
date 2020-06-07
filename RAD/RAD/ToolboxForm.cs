@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RAD.Elements;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +13,24 @@ namespace RAD
 {
     public partial class ToolboxForm : Form
     {
-        public ToolboxForm()
+        protected IRADElementSelectable ElementSelectable { get; private set; }
+
+        public ToolboxForm(IRADElementSelectable elementSelectable)
         {
             InitializeComponent();
+            ElementSelectable = elementSelectable;
+
+            ElementSelectable.SelectRADElement(new RADButton());
         }
 
+        private void buttonButton_Click(object sender, EventArgs e)
+        {
+            ElementSelectable.SelectRADElement(new RADButton());
+        }
+
+        private void imageButton_Click(object sender, EventArgs e)
+        {
+            ElementSelectable.SelectRADElement(new RADImage());
+        }
     }
 }

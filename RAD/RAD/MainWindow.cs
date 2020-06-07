@@ -1,19 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace RAD
 {
-    public partial class MainWindow : Form
+    public partial class MainWindow : Form, IRADElementSelectable
     {
-        protected PropertiesForm PropertiesForm { get; private set; }
-        protected ToolboxForm ToolboxForm { get; private set; }
+        protected PropertiesForm PropertiesForm { get; private set; } = null;
+        protected ToolboxForm ToolboxForm { get; private set; } = null;
+        protected IRADElement currentSelectedElement { get; private set; } = null;
 
 
         public MainWindow()
@@ -30,10 +24,26 @@ namespace RAD
             PropertiesForm.SetDesktopLocation(Location.X + Width, Location.Y);
 
 
-            ToolboxForm = new ToolboxForm();
+            ToolboxForm = new ToolboxForm(this);
             ToolboxForm.Show();
             ToolboxForm.SetDesktopLocation(Location.X - ToolboxForm.Width, Location.Y);
 
+        }
+
+        public void SelectRADElement(IRADElement radElement)
+        {
+            currentSelectedElement = radElement;
+        }
+
+        private void MainWindow_Click(object sender, EventArgs e)
+        {
+            if(currentSelectedElement!=null)
+            {
+                Control control = currentSelectedElement.GetControl;
+                Controls.Add(control);
+                control.Location = PointToClient(Cursor.Position);
+                    //new System.Drawing.Point(Cursor.Position.X - Location.X, Cursor.Position.Y - Location.Y);
+            }
         }
     }
 }
