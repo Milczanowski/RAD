@@ -49,6 +49,12 @@
     <Compile Include="Elements\BaseRADControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Elements\RADLabel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\RADLabel.Designer.cs">
+      <DependentUpon>RADLabel.cs</DependentUpon>
+    </Compile>
     <Compile Include="IProperty.cs" />
     <Compile Include="Elements\RADButton.cs">
       <SubType>UserControl</SubType>
@@ -110,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Elements\RADImage.resx">
       <DependentUpon>RADImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Elements\RADLabel.resx">
+      <DependentUpon>RADLabel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>

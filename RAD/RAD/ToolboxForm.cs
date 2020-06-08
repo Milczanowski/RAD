@@ -32,5 +32,10 @@ namespace RAD
         {
             ElementSelectable.SelectRADElement(new RADImage());
         }
+
+        private void labelButton_MouseClick(object sender, MouseEventArgs e)
+        {
+            ElementSelectable.SelectRADElement(new RADLabel());
+        }
     }
 }

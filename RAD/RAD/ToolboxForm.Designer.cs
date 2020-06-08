@@ -30,6 +30,7 @@
         {
             this.buttonButton = new System.Windows.Forms.Button();
             this.imageButton = new System.Windows.Forms.Button();
+            this.labelButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonButton
@@ -52,12 +53,23 @@
             this.imageButton.UseVisualStyleBackColor = true;
             this.imageButton.Click += new System.EventHandler(this.imageButton_Click);
             // 
+            // labelButton
+            // 
+            this.labelButton.Location = new System.Drawing.Point(13, 86);
+            this.labelButton.Name = "labelButton";
+            this.labelButton.Size = new System.Drawing.Size(160, 30);
+            this.labelButton.TabIndex = 2;
+            this.labelButton.Text = "LABEL";
+            this.labelButton.UseVisualStyleBackColor = true;
+            this.labelButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.labelButton_MouseClick);
+            // 
             // ToolboxForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(184, 461);
             this.ControlBox = false;
+            this.Controls.Add(this.labelButton);
             this.Controls.Add(this.imageButton);
             this.Controls.Add(this.buttonButton);
             this.MaximumSize = new System.Drawing.Size(200, 500);
@@ -72,5 +84,6 @@
 
         private System.Windows.Forms.Button buttonButton;
         private System.Windows.Forms.Button imageButton;
+        private System.Windows.Forms.Button labelButton;
     }
 }
