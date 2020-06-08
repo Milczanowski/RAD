@@ -1,6 +1,6 @@
-﻿namespace RAD.Elements
+﻿namespace RAD.PropertiesForms
 {
-    partial class RADImage
+    partial class TextProperty
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,36 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.image = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.image)).BeginInit();
+            this.textBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // image
+            // textBox
             // 
-            this.image.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.image.BackColor = System.Drawing.SystemColors.Info;
-            this.image.Location = new System.Drawing.Point(0, 0);
-            this.image.Name = "image";
-            this.image.Size = new System.Drawing.Size(150, 150);
-            this.image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.image.TabIndex = 0;
-            this.image.TabStop = false;
+            this.textBox.Location = new System.Drawing.Point(77, 7);
+            this.textBox.Name = "textBox";
+            this.textBox.Size = new System.Drawing.Size(100, 20);
+            this.textBox.TabIndex = 1;
             // 
-            // RADImage
+            // TextProperty
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.image);
-            this.Name = "RADImage";
-            ((System.ComponentModel.ISupportInitialize)(this.image)).EndInit();
+            this.Controls.Add(this.textBox);
+            this.Name = "TextProperty";
+            this.Controls.SetChildIndex(this.label, 0);
+            this.Controls.SetChildIndex(this.textBox, 0);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox image;
+        private System.Windows.Forms.TextBox textBox;
     }
 }

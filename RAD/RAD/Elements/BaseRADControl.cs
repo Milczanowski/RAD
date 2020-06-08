@@ -11,13 +11,15 @@ namespace RAD.Elements
 
         public virtual Control GetControl { get { return this; } }
 
-        public List<IProperty> GetProperties
+        public virtual List<IProperty> GetProperties
         {
             get
             {
                 List<IProperty> properties = new List<IProperty>();
                 properties.Add(GetPositionXProperty());
                 properties.Add(GetPositionYProperty());
+                properties.Add(GetWidthProperty());
+                properties.Add(GetHeightProperty());
 
                 return properties;
             }
@@ -51,6 +53,22 @@ namespace RAD.Elements
             return new NumberProperty("Position Y", Location.Y, (y) =>
             {
                 Location = new System.Drawing.Point(Location.X, y);
+            });
+        }
+
+        protected IProperty GetWidthProperty()
+        {
+            return new NumberProperty("Width", Width, (width) =>
+            {
+                Width = width;
+            });
+        }
+
+        protected IProperty GetHeightProperty()
+        {
+            return new NumberProperty("Height", Height, (height) =>
+            {
+                Height = height;
             });
         }
     }

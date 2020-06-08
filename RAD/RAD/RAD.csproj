@@ -77,11 +77,26 @@
     <Compile Include="PropertiesForm.Designer.cs">
       <DependentUpon>PropertiesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="PropertiesForms\BaseProperty.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="PropertiesForms\NumberProperty.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="PropertiesForms\NumberProperty.Designer.cs">
       <DependentUpon>NumberProperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PropertiesForms\PathProperty.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PropertiesForms\PathProperty.Designer.cs">
+      <DependentUpon>PathProperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PropertiesForms\TextProperty.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PropertiesForms\TextProperty.Designer.cs">
+      <DependentUpon>TextProperty.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ToolboxForm.cs">
@@ -102,8 +117,17 @@
     <EmbeddedResource Include="PropertiesForm.resx">
       <DependentUpon>PropertiesForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PropertiesForms\BaseProperty.resx">
+      <DependentUpon>BaseProperty.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PropertiesForms\NumberProperty.resx">
       <DependentUpon>NumberProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PropertiesForms\PathProperty.resx">
+      <DependentUpon>PathProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PropertiesForms\TextProperty.resx">
+      <DependentUpon>TextProperty.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

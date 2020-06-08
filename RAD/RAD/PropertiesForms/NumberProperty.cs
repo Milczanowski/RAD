@@ -1,26 +1,19 @@
-﻿using RAD.Elements;
-using System;
-using System.Windows.Forms;
+﻿using System;
 
 namespace RAD.PropertiesForms
 {
-    public partial class NumberProperty : UserControl, IProperty
+    public partial class NumberProperty : BaseProperty<int>
     {
-        protected Action<int> OnValueChanged { get; private set; } = delegate { };
-
-        public Control GetControl { get { return this; } }
-
         public NumberProperty()
         {
             InitializeComponent();
         }
 
-        public NumberProperty(string name, int value, Action<int> onValueChanged)
+        public NumberProperty(string name, int value, Action<int> onValueChanged):base(name, value, onValueChanged)
         {
             InitializeComponent();
-            label.Text = name;
             numericUpDown.Value = value;
-            OnValueChanged = onValueChanged;
+            numericUpDown.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
         }
 
         private void numericUpDown_ValueChanged(object sender, EventArgs e)
