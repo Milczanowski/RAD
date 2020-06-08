@@ -5,8 +5,16 @@ namespace RAD
 {
     public partial class PropertiesForm : Form
     {
+        private IRADElementDeleteable ElementDeleteable { get; set; } = null;
+
         public PropertiesForm()
         {
+            InitializeComponent();
+        }
+
+        public PropertiesForm(IRADElementDeleteable elementDeleteable)
+        {
+            ElementDeleteable = elementDeleteable;
             InitializeComponent();
         }
 
@@ -14,7 +22,12 @@ namespace RAD
         {
             Controls.Clear();
 
-            int position = 0;
+            if (properties == null)
+                return;
+
+            Controls.Add(deleteButton);
+
+            int position = 50;
 
             foreach(IProperty property in properties)
             {
@@ -23,6 +36,12 @@ namespace RAD
                 control.Location = new System.Drawing.Point(0, position);
                 position += control.Height;
             }
+        }
+
+        private void deleteButton_Click(object sender, System.EventArgs e)
+        {
+            if(ElementDeleteable != null)
+                ElementDeleteable.DeleteRADElement();
         }
     }
 }

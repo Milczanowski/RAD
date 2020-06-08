@@ -1,15 +1,22 @@
-﻿using RAD.PropertiesForms;
+﻿using Newtonsoft.Json;
+using RAD.Elements.Serializer;
+using RAD.PropertiesForms;
 using System.Collections.Generic;
 
 namespace RAD.Elements
 {
     public partial class RADCheckBox : BaseRADControl
     {
-        public override List<IProperty> GetProperties
+        public override RADElementType RADType
+        {
+            get { return RADElementType.Checkbox; }
+        }
+
+        public override List<IProperty> Properties
         {
             get
             {
-                List<IProperty> properties = base.GetProperties;
+                List<IProperty> properties = base.Properties;
                 properties.Add(GetLabelProperty());
                 properties.Add(GetCheckboxProperty());
 
@@ -20,6 +27,7 @@ namespace RAD.Elements
         public RADCheckBox()
         {
             InitializeComponent();
+            checkBox.Click += new System.EventHandler(Control_Click);
         }
 
         private IProperty GetLabelProperty()
@@ -36,6 +44,23 @@ namespace RAD.Elements
             {
                 checkBox.Checked = isChecked;
             });
+        }
+
+        public override string Serialize()
+        {
+            return JsonConvert.SerializeObject(new CheckBoxSerializer(checkBox.Checked, checkBox.Text, Location.X, Location.Y, Width, Height));
+        }
+
+        public override void Deserialize(string value)
+        {
+            Deserialize(JsonConvert.DeserializeObject<CheckBoxSerializer>(value));
+        }
+
+        protected void Deserialize(CheckBoxSerializer serializer)
+        {
+            checkBox.Text = serializer.label;
+            checkBox.Checked = serializer.isChecked;
+            base.Deserialize(serializer);
         }
     }
 }

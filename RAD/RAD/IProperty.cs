@@ -4,6 +4,6 @@ namespace RAD
 {
     public interface IProperty
     {
-        Control GetControl { get; }
+        Control GetControl { get; }        
     }
 }

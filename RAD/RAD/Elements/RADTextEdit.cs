@@ -1,15 +1,25 @@
-﻿using RAD.PropertiesForms;
+﻿using Newtonsoft.Json;
+using RAD.Elements.Serializer;
+using RAD.PropertiesForms;
 using System.Collections.Generic;
 
 namespace RAD.Elements
 {
     public partial class RADTextEdit : BaseRADControl
     {
-        public override List<IProperty> GetProperties
+        public override RADElementType RADType
         {
             get
             {
-                List<IProperty> properties = base.GetProperties;
+                return RADElementType.TextEdit;
+            }
+        }
+
+        public override List<IProperty> Properties
+        {
+            get
+            {
+                List<IProperty> properties = base.Properties;
                 properties.Add(GetTextProperty());
 
                 return properties;
@@ -28,6 +38,22 @@ namespace RAD.Elements
             {
                 textBox.Text = text;
             });
+        }
+
+        public override string Serialize()
+        {
+            return JsonConvert.SerializeObject(new LabelSerializer(textBox.Text, Location.X, Location.Y, Width, Height));
+        }
+
+        public override void Deserialize(string value)
+        {
+            Deserialize(JsonConvert.DeserializeObject<LabelSerializer>(value));
+        }
+
+        protected void Deserialize(LabelSerializer serializer)
+        {
+            textBox.Text = serializer.label;
+            base.Deserialize(serializer);
         }
     }
 }

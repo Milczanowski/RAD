@@ -7,10 +7,13 @@ namespace RAD
 {
     public interface IRADElement
     {
-        Control GetControl { get; }
-
-        List<IProperty> GetProperties { get; }
+        Control Control { get; }
+        List<IProperty> Properties { get; }
 
         void SetOnClickEvent(Action<IRADElement> onClickEventRADElement);
+
+        string Serialize();
+        void Deserialize(string value);
+        RADElementType RADType { get; }
     }
 }

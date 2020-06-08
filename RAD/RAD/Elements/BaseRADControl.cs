@@ -1,4 +1,6 @@
-﻿using RAD.PropertiesForms;
+﻿using Newtonsoft.Json;
+using RAD.Elements.Serializer;
+using RAD.PropertiesForms;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -9,9 +11,9 @@ namespace RAD.Elements
     {
         private Action<IRADElement> OnClickEventRADElement { get; set; } = delegate { };
 
-        public virtual Control GetControl { get { return this; } }
+        public virtual Control Control { get { return this; } }
 
-        public virtual List<IProperty> GetProperties
+        public virtual List<IProperty> Properties
         {
             get
             {
@@ -24,6 +26,8 @@ namespace RAD.Elements
                 return properties;
             }
         }
+
+        public virtual RADElementType RADType { get { return RADElementType.None; } }
 
         public BaseRADControl()
         {
@@ -78,6 +82,26 @@ namespace RAD.Elements
             {
                 label.Text = text;
             });
+        }
+
+        public virtual string Serialize()
+        {
+            return JsonConvert.SerializeObject(new BaseSerialzier(Location.X, Location.Y, Width, Height));
+        }
+
+        public virtual void Deserialize(string value)
+        {
+            Deserialize(JsonConvert.DeserializeObject<BaseSerialzier>(value));
+        }
+
+        protected virtual void Deserialize(BaseSerialzier serialzier)
+        {
+            if (serialzier == null)
+                return;
+
+            Location = new System.Drawing.Point(serialzier.positionX, serialzier.positionY);
+            Width = serialzier.width;
+            Height = serialzier.height;
         }
     }
 }
