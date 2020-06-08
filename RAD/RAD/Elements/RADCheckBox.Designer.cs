@@ -1,6 +1,6 @@
 ﻿namespace RAD.Elements
 {
-    partial class RADLabel
+    partial class RADCheckBox
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,35 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label = new System.Windows.Forms.Label();
+            this.checkBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
-            // label
+            // checkBox
             // 
-            this.label.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.checkBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label.Location = new System.Drawing.Point(0, 0);
-            this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(180, 30);
-            this.label.TabIndex = 0;
-            this.label.Text = "LABEL";
-            this.label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBox.Location = new System.Drawing.Point(0, 0);
+            this.checkBox.Name = "checkBox";
+            this.checkBox.Padding = new System.Windows.Forms.Padding(3, 0, 3, 0);
+            this.checkBox.Size = new System.Drawing.Size(130, 30);
+            this.checkBox.TabIndex = 0;
+            this.checkBox.Text = "CHECK BOX";
+            this.checkBox.UseVisualStyleBackColor = true;
             // 
-            // RADLabel
+            // RADCheckBox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.Controls.Add(this.label);
-            this.Name = "RADLabel";
-            this.Size = new System.Drawing.Size(180, 30);
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Controls.Add(this.checkBox);
+            this.Name = "RADCheckBox";
+            this.Size = new System.Drawing.Size(130, 30);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label;
+        private System.Windows.Forms.CheckBox checkBox;
     }
 }

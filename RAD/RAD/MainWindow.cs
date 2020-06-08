@@ -43,6 +43,7 @@ namespace RAD
                 Controls.Add(control);
                 control.Location = PointToClient(Cursor.Position);
                 currentSelectedElement.SetOnClickEvent(OnClickRADElement);
+                OnClickRADElement(currentSelectedElement);
                 currentSelectedElement = null;
             }
         }

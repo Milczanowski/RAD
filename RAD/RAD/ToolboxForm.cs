@@ -1,12 +1,5 @@
 ﻿using RAD.Elements;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace RAD
@@ -36,6 +29,16 @@ namespace RAD
         private void labelButton_MouseClick(object sender, MouseEventArgs e)
         {
             ElementSelectable.SelectRADElement(new RADLabel());
+        }
+
+        private void textEditbutton_Click(object sender, EventArgs e)
+        {
+            ElementSelectable.SelectRADElement(new RADTextEdit());
+        }
+
+        private void checkBoxButton_Click(object sender, EventArgs e)
+        {
+            ElementSelectable.SelectRADElement(new RADCheckBox());
         }
     }
 }

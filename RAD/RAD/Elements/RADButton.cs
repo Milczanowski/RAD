@@ -10,7 +10,7 @@ namespace RAD.Elements
             get
             {
                 List<IProperty> properties = base.GetProperties;
-                properties.Add(GetLabelProperty());
+                properties.Add(GetLabelProperty(label, "Label"));
 
                 return properties;
             }
@@ -21,14 +21,6 @@ namespace RAD.Elements
             InitializeComponent();
 
             label.Click += new System.EventHandler(Control_Click);
-        }
-
-        private IProperty GetLabelProperty()
-        {
-            return new TextProperty("Label", label.Text, (text) =>
-            {
-                label.Text = text;
-            });
         }
     }
 }

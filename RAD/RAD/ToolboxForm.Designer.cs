@@ -31,6 +31,8 @@
             this.buttonButton = new System.Windows.Forms.Button();
             this.imageButton = new System.Windows.Forms.Button();
             this.labelButton = new System.Windows.Forms.Button();
+            this.textEditbutton = new System.Windows.Forms.Button();
+            this.checkBoxButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonButton
@@ -63,12 +65,34 @@
             this.labelButton.UseVisualStyleBackColor = true;
             this.labelButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.labelButton_MouseClick);
             // 
+            // textEditbutton
+            // 
+            this.textEditbutton.Location = new System.Drawing.Point(13, 122);
+            this.textEditbutton.Name = "textEditbutton";
+            this.textEditbutton.Size = new System.Drawing.Size(160, 30);
+            this.textEditbutton.TabIndex = 3;
+            this.textEditbutton.Text = "TEXT EDIT";
+            this.textEditbutton.UseVisualStyleBackColor = true;
+            this.textEditbutton.Click += new System.EventHandler(this.textEditbutton_Click);
+            // 
+            // checkBoxButton
+            // 
+            this.checkBoxButton.Location = new System.Drawing.Point(13, 158);
+            this.checkBoxButton.Name = "checkBoxButton";
+            this.checkBoxButton.Size = new System.Drawing.Size(160, 30);
+            this.checkBoxButton.TabIndex = 4;
+            this.checkBoxButton.Text = "CHECK BOX";
+            this.checkBoxButton.UseVisualStyleBackColor = true;
+            this.checkBoxButton.Click += new System.EventHandler(this.checkBoxButton_Click);
+            // 
             // ToolboxForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(184, 461);
             this.ControlBox = false;
+            this.Controls.Add(this.checkBoxButton);
+            this.Controls.Add(this.textEditbutton);
             this.Controls.Add(this.labelButton);
             this.Controls.Add(this.imageButton);
             this.Controls.Add(this.buttonButton);
@@ -85,5 +109,7 @@
         private System.Windows.Forms.Button buttonButton;
         private System.Windows.Forms.Button imageButton;
         private System.Windows.Forms.Button labelButton;
+        private System.Windows.Forms.Button textEditbutton;
+        private System.Windows.Forms.Button checkBoxButton;
     }
 }

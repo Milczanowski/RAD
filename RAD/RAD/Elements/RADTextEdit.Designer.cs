@@ -1,6 +1,6 @@
 ﻿namespace RAD.Elements
 {
-    partial class RADLabel
+    partial class RADTextEdit
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,35 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label = new System.Windows.Forms.Label();
+            this.textBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // label
+            // textBox
             // 
-            this.label.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.textBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label.Location = new System.Drawing.Point(0, 0);
-            this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(180, 30);
-            this.label.TabIndex = 0;
-            this.label.Text = "LABEL";
-            this.label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.textBox.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.textBox.Location = new System.Drawing.Point(0, 0);
+            this.textBox.Name = "textBox";
+            this.textBox.Size = new System.Drawing.Size(180, 20);
+            this.textBox.TabIndex = 0;
             // 
-            // RADLabel
+            // RADTextEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.Controls.Add(this.label);
-            this.Name = "RADLabel";
-            this.Size = new System.Drawing.Size(180, 30);
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.Controls.Add(this.textBox);
+            this.Name = "RADTextEdit";
+            this.Size = new System.Drawing.Size(180, 20);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label;
+        private System.Windows.Forms.TextBox textBox;
     }
 }

@@ -1,6 +1,6 @@
-﻿namespace RAD.Elements
+﻿namespace RAD.PropertiesForms
 {
-    partial class RADLabel
+    partial class CheckbocProperty
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,35 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label = new System.Windows.Forms.Label();
+            this.checkBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
-            // label
+            // checkBox
             // 
-            this.label.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label.Location = new System.Drawing.Point(0, 0);
-            this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(180, 30);
-            this.label.TabIndex = 0;
-            this.label.Text = "LABEL";
-            this.label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBox.AutoSize = true;
+            this.checkBox.Location = new System.Drawing.Point(150, 7);
+            this.checkBox.Name = "checkBox";
+            this.checkBox.Size = new System.Drawing.Size(15, 14);
+            this.checkBox.TabIndex = 1;
+            this.checkBox.UseVisualStyleBackColor = true;
             // 
-            // RADLabel
+            // CheckbocProperty
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.Controls.Add(this.label);
-            this.Name = "RADLabel";
-            this.Size = new System.Drawing.Size(180, 30);
+            this.Controls.Add(this.checkBox);
+            this.Name = "CheckbocProperty";
+            this.Controls.SetChildIndex(this.label, 0);
+            this.Controls.SetChildIndex(this.checkBox, 0);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label;
+        private System.Windows.Forms.CheckBox checkBox;
     }
 }

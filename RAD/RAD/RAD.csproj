@@ -49,11 +49,23 @@
     <Compile Include="Elements\BaseRADControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Elements\RADCheckBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\RADCheckBox.Designer.cs">
+      <DependentUpon>RADCheckBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Elements\RADLabel.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Elements\RADLabel.Designer.cs">
       <DependentUpon>RADLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Elements\RADTextEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\RADTextEdit.Designer.cs">
+      <DependentUpon>RADTextEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="IProperty.cs" />
     <Compile Include="Elements\RADButton.cs">
@@ -86,6 +98,12 @@
     <Compile Include="PropertiesForms\BaseProperty.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="PropertiesForms\CheckbocProperty.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PropertiesForms\CheckbocProperty.Designer.cs">
+      <DependentUpon>CheckbocProperty.cs</DependentUpon>
+    </Compile>
     <Compile Include="PropertiesForms\NumberProperty.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -114,11 +132,17 @@
     <EmbeddedResource Include="Elements\RADButton.resx">
       <DependentUpon>RADButton.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Elements\RADCheckBox.resx">
+      <DependentUpon>RADCheckBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Elements\RADImage.resx">
       <DependentUpon>RADImage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Elements\RADLabel.resx">
       <DependentUpon>RADLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Elements\RADTextEdit.resx">
+      <DependentUpon>RADTextEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
@@ -128,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PropertiesForms\BaseProperty.resx">
       <DependentUpon>BaseProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PropertiesForms\CheckbocProperty.resx">
+      <DependentUpon>CheckbocProperty.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PropertiesForms\NumberProperty.resx">
       <DependentUpon>NumberProperty.cs</DependentUpon>

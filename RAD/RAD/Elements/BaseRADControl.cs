@@ -71,5 +71,13 @@ namespace RAD.Elements
                 Height = height;
             });
         }
+
+        protected IProperty GetLabelProperty(Label label, string name)
+        {
+            return new TextProperty(name, label.Text, (text) =>
+            {
+                label.Text = text;
+            });
+        }
     }
 }
